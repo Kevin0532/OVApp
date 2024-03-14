@@ -1,0 +1,64 @@
+.button{
+    -fx-background-color: white;
+    -fx-background-radius: 13;
+    -fx-border-color: #cfcfcf;
+    -fx-border-width: 5;
+    -fx-border-radius: 10;
+    -fx-text-fill: #a72b28;
+}
+#planButton{
+    -fx-background-color: #18648f;
+    -fx-background-radius: 20;
+    -fx-border-color: white;
+    -fx-border-width: 5;
+    -fx-border-radius: 10;
+    -fx-text-fill: white;
+}
+#resultPanes{
+    -fx-border-color: white;
+    -fx-border-width: 5;
+    -fx-border-radius: 10;
+    -fx-background-color: #0084c5;
+    -fx-background-radius: 20;
+}
+#arrivalBox{
+    -fx-font-size:20pt
+}
+#departureBox{
+    -fx-font-size:20pt
+}
+#searchBox{
+    -fx-background-color: #a72b28;
+    -fx-background-radius: 10;
+}
+#resultPane{
+    -fx-background-color: #58b6d9;
+    -fx-background-radius: 10;
+}
+#resultText{
+    -fx-font-weight: bold;
+    -fx-font-size: 20pt;
+}
+#paneTexts{
+    -fx-font-weight: bold;
+    -fx-font-size: 16pt;
+    -fx-text-fill: white;
+}
+.spinner{
+    -fx-font-size:20pt;
+}
+#usernameTextField{
+    -fx-font-size:20pt;
+}
+#enterPasswordField{
+    -fx-font-size:20pt;
+}
+#emailInput{
+    -fx-font-size:20pt;
+}
+#usernameInput{
+    -fx-font-size:20pt;
+}
+#passwordInput{
+    -fx-font-size:20pt;
+}

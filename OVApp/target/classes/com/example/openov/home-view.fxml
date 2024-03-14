@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.openov.HelloController">
+   <left>
+      <VBox fx:id="searchBox" prefHeight="900.0" prefWidth="504.0" stylesheets="@styling.css" BorderPane.alignment="CENTER">
+         <children>
+            <FlowPane prefHeight="350.0" prefWidth="504.0">
+               <children>
+                  <Label prefHeight="75.0" prefWidth="88.0" text="Van" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                     <FlowPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </FlowPane.margin>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="departureBox" prefHeight="60.0" prefWidth="365.0">
+                     <FlowPane.margin>
+                        <Insets top="20.0" />
+                     </FlowPane.margin>
+                  </ChoiceBox>
+                  <Label layoutX="30.0" layoutY="11.0" prefHeight="78.0" prefWidth="110.0" text="Naar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                     <FlowPane.margin>
+                        <Insets left="20.0" />
+                     </FlowPane.margin>
+                  </Label>
+                  <ChoiceBox fx:id="arrivalBox" layoutX="138.0" layoutY="19.0" prefHeight="60.0" prefWidth="365.0">
+                     <FlowPane.margin>
+                        <Insets top="20.0" />
+                     </FlowPane.margin>
+                  </ChoiceBox>
+                  <Label layoutX="30.0" layoutY="91.0" prefHeight="78.0" prefWidth="110.0" text="Tijd" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                     <FlowPane.margin>
+                        <Insets left="20.0" />
+                     </FlowPane.margin>
+                  </Label>
+                  <Spinner fx:id="comboBox1" editable="true" prefHeight="60.0" prefWidth="160.0">
+                     <FlowPane.margin>
+                        <Insets right="44.0" top="20.0" />
+                     </FlowPane.margin>
+                  </Spinner>
+                  <Spinner fx:id="comboBox2" editable="true" prefHeight="60.0" prefWidth="160.0">
+                     <FlowPane.margin>
+                        <Insets top="20.0" />
+                     </FlowPane.margin>
+                  </Spinner>
+                  <Button fx:id="planButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="365.0" text="Plannen">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                     <FlowPane.margin>
+                        <Insets left="129.0" top="20.0" />
+                     </FlowPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </FlowPane>
+            <BorderPane id="resultPanes" fx:id="myPane1" prefHeight="200.0" prefWidth="200.0" stylesheets="@styling.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <left>
+                  <Label id="paneTexts" fx:id="departureText1" stylesheets="@styling.css" BorderPane.alignment="BOTTOM_LEFT">
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </BorderPane.margin>
+                  </Label>
+               </left>
+               <top>
+                  <AnchorPane BorderPane.alignment="TOP_LEFT">
+                     <BorderPane.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <Label id="paneTexts" fx:id="startingTime1" stylesheets="@styling.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label id="paneTexts" fx:id="totalDurationText1" stylesheets="@styling.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </top>
+            </BorderPane>
+            <BorderPane id="resultPanes" fx:id="myPane2" prefHeight="200.0" prefWidth="200.0" stylesheets="@styling.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+               <left>
+                  <Label id="paneTexts" fx:id="departureText2" stylesheets="@styling.css" BorderPane.alignment="BOTTOM_LEFT">
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </BorderPane.margin>
+                  </Label>
+               </left>
+               <top>
+                  <AnchorPane BorderPane.alignment="TOP_LEFT">
+                     <BorderPane.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <Label id="paneTexts" fx:id="startingTime2" stylesheets="@styling.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label id="paneTexts" fx:id="totalDurationText2" stylesheets="@styling.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </top>
+            </BorderPane>
+            <BorderPane id="resultPanes" fx:id="myPane3" prefHeight="200.0" prefWidth="200.0" stylesheets="@styling.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+               <left>
+                  <Label id="paneTexts" fx:id="departureText3" stylesheets="@styling.css" BorderPane.alignment="BOTTOM_LEFT">
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </BorderPane.margin>
+                  </Label>
+               </left>
+               <top>
+                  <AnchorPane BorderPane.alignment="TOP_LEFT">
+                     <BorderPane.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <Label id="paneTexts" fx:id="startingTime3" stylesheets="@styling.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label id="paneTexts" fx:id="totalDurationText3" stylesheets="@styling.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </top>
+            </BorderPane>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <HBox alignment="TOP_RIGHT">
+               <children>
+                  <AnchorPane prefHeight="90.0" prefWidth="893.0">
+                     <children>
+                        <Button fx:id="favoriteButton" layoutX="314.0" layoutY="37.0" mnemonicParsing="false" onAction="#favoriteButtonOnAction" prefHeight="55.0" prefWidth="163.0" stylesheets="@styling.css" text="Favorieten" AnchorPane.rightAnchor="416.0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="historyButton" layoutX="509.0" layoutY="37.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="188.0" stylesheets="@styling.css" text="Geschiedenis" AnchorPane.rightAnchor="196.0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="757.0" layoutY="7.0" text="Language" AnchorPane.rightAnchor="56.0">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="englishButton" layoutX="735.0" layoutY="33.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="122.0" stylesheets="@styling.css" text="English" AnchorPane.rightAnchor="36.0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="switchButton" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#switchButtonOnAction" stylesheets="@styling.css" text="⇅" AnchorPane.leftAnchor="14.0">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="loginButton" alignment="CENTER" contentDisplay="RIGHT" minWidth="-Infinity" mnemonicParsing="false" prefHeight="77.0" prefWidth="171.0" stylesheets="@styling.css" text="Login">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <AnchorPane id="resultPane" fx:id="resultPane" prefHeight="2000.0" prefWidth="2000.0" stylesheets="@styling.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="25.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="resultText" stylesheets="@styling.css" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="addFavoriteButton" layoutX="746.0" layoutY="15.0" mnemonicParsing="false" onAction="#addFavoriteButtonOnAction" text="+" visible="false" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="1069.0" prefWidth="1582.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.openov.HelloController">
+   <children>
+            <Button fx:id="planButton" layoutX="50.0" layoutY="174.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="350.0" style="-fx-background-color: #347aeb; -fx-background-radius: 10px;" text="Plannen" textFill="WHITE" AnchorPane.leftAnchor="50.0">
+                <font>
+                    <Font name="SF Compact Rounded Bold" size="30.0" />
+                </font>
+         <padding>
+            <Insets bottom="20.0" top="20.0" />
+         </padding>
+            </Button>
+      <GridPane layoutX="42.0" layoutY="36.0" prefHeight="132.0" prefWidth="343.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="30.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.49310302734375" minWidth="10.0" prefWidth="76.22909545898438" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.7709045410156" minWidth="10.0" prefWidth="266.7709045410156" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="55.0" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="55.0" minHeight="9.719108581542969" prefHeight="55.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+                    <ChoiceBox fx:id="departureBox" prefHeight="40.0" prefWidth="260.0" style="-fx-font-size: 15pt;" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ChoiceBox>
+                    <ChoiceBox fx:id="arrivalBox" prefHeight="40.0" prefWidth="260.0" style="-fx-font-size: 15pt;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <ComboBox fx:id="comboBox1" prefHeight="40.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <ComboBox fx:id="comboBox2" prefHeight="40.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <GridPane.margin>
+                            <Insets left="80.0" />
+                        </GridPane.margin>
+                    </ComboBox>
+                    <Label prefHeight="37.0" prefWidth="61.0" text="Van">
+                        <font>
+                            <Font name="SF Compact Rounded Bold" size="30.0" />
+                        </font>
+                        <opaqueInsets>
+                            <Insets />
+                        </opaqueInsets>
+                    </Label>
+                    <Label prefHeight="37.0" prefWidth="68.0" text="Naar" GridPane.rowIndex="1">
+                        <font>
+                            <Font name="SF Compact Rounded Bold" size="30.0" />
+                        </font>
+                    </Label>
+                    <Label text="Tijd" GridPane.rowIndex="2">
+                        <font>
+                            <Font name="SF Compact Rounded Bold" size="30.0" />
+                        </font>
+                    </Label>
+         </children>
+      </GridPane>
+      <Circle fill="#e1e1e1" layoutX="405.0" layoutY="80.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+      <AnchorPane layoutX="931.0" layoutY="146.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="120.0">
+         <children>
+            <Button layoutY="67.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="199.0" layoutY="68.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" text="Button" />
+            <Label layoutX="19.0" text="Vervoersmiddel">
+               <font>
+                  <Font name="SF Compact Rounded Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </AnchorPane>
+      <Button fx:id="loginButton" layoutX="923.0" layoutY="68.0" mnemonicParsing="false" text="Login" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="75.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Button>
+          <VBox layoutX="20.0" layoutY="353.0" prefHeight="720.0" prefWidth="510.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="50.0">
+         <children>
+            <Pane fx:id="myPane1" maxWidth="-Infinity" prefHeight="175.0" prefWidth="500.0" style="-fx-background-color: #d8d8d8; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: black;">
+               <VBox.margin>
+                  <Insets bottom="6.0" />
+               </VBox.margin>
+               <children>
+                  <Pane layoutX="390.0" layoutY="85.0" maxWidth="-Infinity" prefHeight="37.0" prefWidth="90.0" style="-fx-background-color: BFBFBF; -fx-background-radius: 10px;">
+                     <children>
+                        <Label layoutX="7.0" layoutY="2.0" text="&lt;prijs&gt;">
+                           <font>
+                              <Font name="SF Compact" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label layoutX="20.0" layoutY="10.0" text="&lt;starttijd -&gt; eindtijd&gt;">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="50.0" text="&lt;ReisInformatie&gt;">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="myPane2" maxWidth="500.0" prefHeight="175.0" prefWidth="500.0" style="-fx-background-color: #d8d8d8; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: black;">
+               <VBox.margin>
+                  <Insets bottom="6.0" />
+               </VBox.margin>
+               <children>
+                  <Pane layoutX="390.0" layoutY="85.0" prefHeight="37.0" prefWidth="90.0" style="-fx-background-color: BFBFBF; -fx-background-radius: 10px;">
+                     <children>
+                        <Label layoutX="7.0" layoutY="2.0" text="&lt;prijs&gt;">
+                           <font>
+                              <Font name="SF Compact" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label layoutX="20.0" layoutY="10.0" text="&lt;starttijd -&gt; eindtijd&gt;">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="50.0" text="&lt;ReisInformatie&gt;">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="myPane3" maxWidth="500.0" prefHeight="175.0" prefWidth="500.0" style="-fx-background-color: #d8d8d8; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: black;">
+               <VBox.margin>
+                  <Insets bottom="6.0" />
+               </VBox.margin>
+               <children>
+                  <Pane layoutX="390.0" layoutY="85.0" prefHeight="37.0" prefWidth="90.0" style="-fx-background-color: BFBFBF; -fx-background-radius: 10px;">
+                     <children>
+                        <Label layoutX="7.0" layoutY="2.0" text="&lt;prijs&gt;">
+                           <font>
+                              <Font name="SF Compact" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label layoutX="20.0" layoutY="10.0" text="&lt;starttijd -&gt; eindtijd&gt;">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="50.0" text="&lt;ReisInformatie&gt;">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="myPane4" maxWidth="500.0" prefHeight="175.0" prefWidth="500.0" style="-fx-background-color: #d8d8d8; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: black;">
+               <VBox.margin>
+                  <Insets bottom="6.0" />
+               </VBox.margin>
+               <children>
+                  <Pane layoutX="390.0" layoutY="85.0" prefHeight="37.0" prefWidth="90.0" style="-fx-background-color: BFBFBF; -fx-background-radius: 10px;">
+                     <children>
+                        <Label layoutX="7.0" layoutY="2.0" text="&lt;prijs&gt;">
+                           <font>
+                              <Font name="SF Compact" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label layoutX="20.0" layoutY="10.0" text="&lt;starttijd -&gt; eindtijd&gt;">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="50.0" text="&lt;ReisInformatie&gt;">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+          </VBox>
+      <Pane layoutX="569.0" layoutY="327.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="716.0" prefWidth="1500.0" style="-fx-background-color: #d8d8d8; -fx-background-radius: 10px; -fx-border-color: #000000; -fx-border-radius: 10px;" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="574.0" AnchorPane.rightAnchor="50.0">
+         <padding>
+            <Insets left="50.0" right="50.0" />
+         </padding>
+      </Pane>
+   </children>
+</AnchorPane>
